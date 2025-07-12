@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+    width: 100%;
+    width: 370px;
+    transition: box-shadow 0.3s;
+}
+
+.calculator:hover {
+    box-shadow: 0px 6px 30px rgba(113,115,119,0.7);
+}
+
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84,84,84,0.1);
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 24px;
+    margin: 10px 0;
+    border-bottom: 1px solid #717377;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+input:focus {
+    box-shadow: 0px 3px 20px rgba(84,84,84,0.2);
+    border-bottom: 1px solid #fb7c14;
+}
+
+input::placeholder{
+    color: #fff;
+    opacity: 0.7;
+}
+
+button{
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover, button:focus {
+    background: rgba(251, 124, 20, 0.15);
+    color: #fb7c14;
+    transform: scale(1.08);
+}
+
+button:active {
+    background: rgba(251, 124, 20, 0.3);
+    color: #fff;
+    transform: scale(0.95);
+}
+
+.equal_btn{
+    background-color: #fb7c14;
+    color: #fff;
+    box-shadow: 0px 4px 20px rgba(251, 124, 20, 0.3);
+    transition: background 0.2s, color 0.2s;
+}
+
+
+
+.operator{
+    color: #6dee0a;
+    transition: color 0.2s;
+}
+
+.operator:hover, .operator:focus {
+    color: #fff;
+    /* background: #6dee0a; */
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        padding: 10px;
+        max-width: 95vw;
+    }
+    input {
+        font-size: 1.5rem;
+        padding: 16px;
+    }
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin: 5px;
+    }
+}
